@@ -45,15 +45,7 @@ let price = 50;
 let header = "total bill: ";
 let afterTax = price * (1 + tax);
 let totBil = header + afterTax.toString() + symbol;
-
-// Remove characters at index 14 and 15
 totBil = totBil.slice(0, 14) + totBil.slice(16);
-
 console.log(totBil);
-
-// // Round the number 50.6 to its nearest integer
-
-
-
 
 // //Create a variable that is undefined
