@@ -7,7 +7,7 @@ function counter(arr){
     for(let i = 0; i < arrString.length ; i++){
 
         let ch = [arrString[i].toLowerCase()]
-
+        if (ch === " " ) continue
         if(count[ch]){
             count[ch] += 1
         }else{
