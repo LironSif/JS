@@ -42,3 +42,41 @@
 // }
 
 
+// Array................................................................
+
+// updating array........
+
+
+// let shoppinglist = [ 'cheddar cheese', '2% milk'];
+
+// shoppinglist[1] = 'whole mil;';
+
+// console.log(shoppinglist)
+
+
+// adding to Array.........
+
+
+// let shoppinglist = [ 'cheddar cheese', '2% milk'];
+
+// shoppinglist[2] = 'whole mil;';
+
+// console.log(shoppinglist)
+
+
+// shorthand for add remove to array...........
+
+
+let topSongs = [
+    'efwefewfwfwefwe',
+    'effewfewf',
+    'dffsss'
+]
+
+// topSongs.push('ddddddddd')
+// topSongs
+
+// topSongs.pop()
+// const newList = topSongs.pop ()
+// newList
+// topSongs
