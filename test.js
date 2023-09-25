@@ -67,11 +67,11 @@
 // shorthand for add remove to array...........
 
 
-let topSongs = [
-    'efwefewfwfwefwe',
-    'effewfewf',
-    'dffsss'
-]
+// // let topSongs = [
+//     'efwefewfwfwefwe',
+//     'effewfewf',
+//     'dffsss'
+// ]
 
 // topSongs.push('ddddddddd')
 // topSongs
@@ -80,3 +80,28 @@ let topSongs = [
 // const newList = topSongs.pop ()
 // newList
 // topSongs
+
+
+// let shoppingList = [
+//     'Milk',
+//     'Eggs',
+//     'Bread',
+//     'Butter',
+//     'Potatoes',
+//     'Orange Juice'
+// ];
+
+//  let length = shoppingList.length;
+// shoppingList[length] = 'HHHHH';
+// console.log(shoppingList);
+
+
+// const word = 'נחמן מאומן'
+
+// let brWord = ""
+
+// for (let i = 0; i < word. length; i++){ 
+//     console.log([i])
+//     brWord += word[i];
+//     console.log(brWord)
+//    }

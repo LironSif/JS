@@ -13,6 +13,7 @@ let book2 = {
 let bookUtils = {
 }
 bookUtils.name = 'utils'
+ 
 bookUtils.getFirstPublished = function (a,b){
     if( a.year < b.year ) {
         return a
