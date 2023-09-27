@@ -181,6 +181,7 @@
 // let result = replaceExludelast4("helfsdfsdflef");
 // console.log(result); 
 
+
 // 5.7
 
 // function shortestWord(str) {
@@ -195,6 +196,34 @@
 // }
 // console.log(shortestWord('hgggi bo how are you doing')); 
 
+
+// 6.2
+
+checker = function(x) {
+    let tempchar = {};
+
+    for (let char of x) {
+        let charLower = char.toLowerCase();
+        if (tempchar[charLower] === undefined) {
+            tempchar[charLower] = 1;
+        } else {
+            tempchar[charLower]++;
+        }console.log(tempchar)
+    }
+
+    let count = 0;
+    for (let key in tempchar) {
+        if (tempchar[key] > 1) {
+            count++;
+        }
+       newobj = console.log(`the ${key} showed up ${tempchar[key]} times`);
+    }
+    console.log(count)
+    return count;
+
+}
+
+console.log(checker("aaiiiiibBcde"));  
 
 
 
