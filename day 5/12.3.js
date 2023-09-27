@@ -15,7 +15,7 @@
             students: [],
             capacityLeft: 2,
           },
-        ],
+        ],s
         students: [
           {
             id: 10,
