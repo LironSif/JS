@@ -34,5 +34,61 @@ console.log(randomNumbers);
 // console.log(firstElement, lastElement);  
 
 // ....................4..................
+// function vowelCount(str) {
+//     str = str.toLowerCase();
 
+//     let vowelCountObj = {a:0, e:0, i:0, o:0, u:0};
+
+//     for(let i = 0; i < str.length; i++) {
+       
+//         if(vowelCountObj.hasOwnProperty(str[i])) {
+//             vowelCountObj[str[i]]++;
+//         }
+//     }
+//     return vowelCountObj;
+// }
+
+// console.log(vowelCount('Example string')); 
+
+// ....................5..................
+
+// function capitalize (str) {
+
+
+//     let everyOtherstr = 
+//     let cap = everyOtherstr.toUpperCase()
+//     return cap
+// }
+// console.log(capitalize('sdad  asd dssdf dsfsd dsd'))
+
+
+// ....................6..................
+
+
+
+const stringToArr = (str) => {
+    let newArr = str.split(' ');
+    return newArr;
+};
+
+const result = stringToArr('hi bro go on');
+console.log(result); 
+
+const everyOtherWord = (arr) => {
+    let newArr2 = arr.filter((word, index) => index % 2 === 0);
+    return newArr2;
+};
+
+const filteredResult = everyOtherWord(result);
+console.log(filteredResult);  
+
+console.log(everyOtherWord(stringToArr('hi bro go you')));
+ 
+function capitalize(filteredResult) {
+    let cap = filteredResult.map(word => word.toUpperCase());
+    return cap;
+}
+
+const capitalizedArray = capitalize(filteredResult);
+console.log(capitalizedArray);
 
