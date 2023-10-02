@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible"
+content="IE=edge" />
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0" />
+<title>Document</title>
+</head>
+<body>
+<h1>Header</h1>
+<p>Paragraph</p>
+<a href="#">link</a>
+<img src="" alt="" />
+<div class="x">Div with a class</div>
+<div id="y">Div with an id</div>
+<input type="text" />
+<input type="text" />
+<input type="text" />
+</body>
+
+<script>
+
+    const allElements1 = document.body.getElementsByTagName('*');
+    for (let i = 0; i < allElements1.length; i++) {
+        const elementVar1 = allElements1[i];
+        console.log(elementVar1);
+    }
+
+    const allElements2 = document.body.querySelectorAll('*');
+    for (let i = 0; i < allElements2.length; i++) {
+        const elementVar2 = allElements2[i];
+        console.log(elementVar2);
+    }
+
+    const allInputs1 = document.querySelectorAll('input');
+    allInputs1.forEach(input => console.log(input));
+
+    const allInputs2 = document.getElementsByTagName('input');
+    Array.from(allInputs2).forEach(input => console.log(input));
+</script>
+</html>
