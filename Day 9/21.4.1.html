@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Document</title>
+
+<style>
+     body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+</style>
+    
+</head>
+<body>
+
+    <div id="clickable"><i class="far fa-lightbulb fa-4x"></i></div>
+    
+    <script>
+      
+        let light = document.getElementById('clickable');
+        light.addEventListener('click', turnOnOff);
+        
+           function turnOnOff () { document.body.style.backgroundColor = "#FFFF00";
+           light.classList.toggle("color");
+
+        };
+      
+
+    </script>
+</body>
+</html>
+s

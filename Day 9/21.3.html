@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #btn-1 {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h4>Why are you interested in this position</h4>
+    <textarea name="answer" id="text1" cols="30" rows="20"></textarea>
+    <button id="btn-1">Click here!</button>
+
+    <div id="msg">x</div>
+
+    <script>
+        document.getElementById('btn-1').addEventListener('click', function () {
+            let text = document.getElementById('text1').value;
+            let wordCount = text.split(/\s+/).length;
+            let divMsg = document.getElementById('msg');
+
+            if (wordCount <= 100) {
+                divMsg.innerText = 'put More text NOW !!!!!!! i told you 100 words minmum '
+            } else {
+                divMsg.innerText = 'you Hired!'
+            } 
+        });
+    </script>
+</body>
+</html>

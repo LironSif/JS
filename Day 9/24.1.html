@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background-ligh-off {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#2e3031 0%, #efeaea 100%);
+}
+
+.background-light-on {
+    background-image: linear-gradient(#ebd241 0%, #ffffff 100%);  
+}
+
+.bulb-image-off{
+    height:200px;
+    width: 150px;
+    background: url("./images/Light_bulb_off.png");
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bulb-light-on{
+    background: url("./images/Light_bulb_on.png") center / auto 100% no-repeat;
+}
+
+
+    </style>
+</head>
+s
+<body>
+    <main class="background-ligh-off">
+        <div class="bulb-image-off"></div>
+    </main>
+<script>
+    const background = document.querySelector(".background-ligh-off");
+const lightBulbImg = document.querySelector(".bulb-image-off");
+
+let islLightOn = false;
+console.log("light is on:",islLightOn);
+
+const toggleLightBulb = () => {
+    lightBulbImg.classList.toggle(".bulb-light-on");
+    background.classList.toggle("background-light-on")
+    islLightOn = !islLightOn;
+    console.log("light is on:",islLightOn);
+}
+
+lightBulbImg.addEventListener("click",toggleLightBulb)
+
+document.body.addEventListener("dblclick",toggleLightBulb);
+</script>
+</body>
+
+</html>

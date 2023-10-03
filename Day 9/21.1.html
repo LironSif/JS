@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  #result {
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
+
+</style>
+<body>
+    <input type="number" id="age" placeholder="enter your age">
+    <button id="submit-btn"> submit</button>
+
+    <div id="result">X</div>
+    <script>
+        document.getElementById('submit-btn').addEventListener('click' , veryfier);
+        
+        function veryfier () {
+            let age = document.getElementById('age').value;
+            let divMsg = document.getElementById('result');
+
+            if(age >= 18) {
+                divMsg.innerText = 'you can drink'
+            } else if (age > 0) {
+                divMsg.innerText =  "You're too young.";
+            } else {
+                divMsg.innerText =  "You're too young.";
+                 'enter valid age pls'
+            }
+        }
+    </script>
+</body>
+</html>
