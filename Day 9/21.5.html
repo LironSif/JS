@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Smiles</title>
+    <style>
+        .image-container {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="number" id="numberInput" min="1" max="5" value="5">
+    <button onclick="updateSmiles()">Submit</button>
+    <div id="imageContainer" class="image-container"></div>
+
+    <script>
+        function updateSmiles() {
+            var num = document.getElementById('numberInput').value;
+            var container = document.getElementById('imageContainer');
+            container.innerHTML = '';  
+            for (var i = 0; i < num; i++) {
+                var img = document.createElement('img');
+                img.src = 'download.png';
+                img.alt = 'Smile';
+                img.className = 'image';
+                container.appendChild(img);
+            }
+        }
+
+    
+        window.onload = updateSmiles;
+    </script>
+
+</body>
+</html>
