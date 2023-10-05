@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22.1</title>
+
+    <style>
+        #container {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: auto;
+            gap: 20px;
+            border: 1px solid gray;
+            padding: 30px;
+            margin-top: 10%;
+        }
+
+        #ConfirmBox {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            width: 20vw;
+            height: 30vh;
+            margin: auto;
+            position: fixed;
+            top: 0; right: 0; bottom: 0; left: 0;
+            border: 2px solid #000;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #btn-div {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body> 
+   
+<form id="container">
+    <input type="text" id="userName" placeholder="Your Name">
+    <input type="number" id="userAge" placeholder="Your Age">
+    <input type="email" id="userEmail" placeholder="Your email">
+    <button id="submit" type="submit"> Submit</button>
+</form>
+
+<div id="ConfirmBox">
+    <h4>this is your data</h4>
+    <p id="confData"></p>
+    <div id="btn-div">
+        <button id="confirmButton"> Confirm </button> 
+        <button id="changeInfoButton"> Change Information </button>
+    </div>
+    
+</div>
+
+<script>
+    // dataCapture......................
+    let formData = {};
+    
+    // selectors........................
+    let form = document.querySelector('#container');
+    let selectedName = document.querySelector('#userName');
+    let selectedAge = document.querySelector('#userAge');
+    let selectedEmail = document.querySelector('#userEmail');
+    let dataShow = document.querySelector('#confData');
+    let confirmBox = document.querySelector('#ConfirmBox');
+
+    // Function to display data
+    function displayData() {
+        let newData = Object.entries(formData); 
+        dataShow.innerHTML = '';  
+        for (let i = 0; i < newData.length; i++) {
+            let div = document.createElement('div');  רקק
+            div.innerText = newData[i][0] + ': ' + newData[i][1]; 
+            dataShow.appendChild(div);  
+        }
+    }
+    
+    // listeners......................
+    form.addEventListener('submit', function(evt) {
+        evt.preventDefault();
+        formData = {
+            name: selectedName.value,
+            age: selectedAge.value,
+            email: selectedEmail.value
+        };
+
+       
+        displayData();
+        
+        confirmBox.style.display = 'flex'; 
+    });
+    
+    // Handlers......................
+    document.getElementById('confirmButton').addEventListener('click', function() {
+        alert('Congratulations, you successfully sent this form');
+        confirmBox.style.display = 'none';  
+        form.reset(); 
+    });
+
+    document.getElementById('changeInfoButton').addEventListener('click', function() {
+        confirmBox.style.display = 'none'; 
+    });
+
+</script>
+</body>
+</html>

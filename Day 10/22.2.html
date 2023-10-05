@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+         body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+         }
+        
+         .img{
+            width: 200px;
+            height: 200px;
+            display: none; 
+         }
+
+         .img-on{
+             display: flex;
+         }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="checkbox" class="btn">Check here to show the photo
+        <div class="img">
+           <img src="../Day 9/images.jfif" alt="">
+        </div>
+    </div>
+
+    <script>
+        // selectors
+        const checkbox = document.querySelector('.btn')
+        const imgDiv = document.querySelector('.img')
+
+        // Event listener
+        checkbox.addEventListener('change', function() {
+         if (this.checked) {
+             imgDiv.classList.add('img-on');  
+         } else {
+             imgDiv.classList.remove('img-on');  
+         }
+        });
+    </script>
+</body>
+</html>
