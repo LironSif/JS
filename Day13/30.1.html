@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gitApi</title>
+    <style>
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form id="gitForm">
+            <h1>Git Api</h1>
+            <input type="text" id="gitUserName" placeholder="Enter Git UserName...">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('gitForm')
+        const gitUserName = document.getElementById('gitUserName')
+    
+        form.addEventListener("submit", function(event) {
+            event.preventDefault()
+            let gitUser = gitUserName.value
+            fetch(`https://api.github.com/users/${gitUser}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('User not found');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    const userAvatar = document.createElement('img');
+                    userAvatar.src = data.avatar_url;
+                    userAvatar.alt = 'GitHub User Avatar';
+                    document.body.appendChild(userAvatar);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+           
+                });
+        });
+    </script>
+    
+</body>
+</html>
